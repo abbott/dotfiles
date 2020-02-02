@@ -1,0 +1,20 @@
+# Git config
+GIT_AUTHOR_NAME="Bruce Abbott"
+GIT_COMMITTER_NAME="$GIT_AUTHOR_NAME"
+git config --global user.name "$GIT_AUTHOR_NAME"
+
+GIT_AUTHOR_EMAIL="bruce@egg.haus"
+GIT_COMMITTER_EMAIL="$GIT_AUTHOR_EMAIL"
+git config --global user.email "$GIT_AUTHOR_EMAIL"
+
+GIT_AUTHOR_SIGNINGKEY="A68C4D3B"
+GIT_COMMITTER_SIGNINGKEY="$GIT_AUTHOR_SIGNINGKEY"
+git config --global user.signingkey "$GIT_COMMITTER_SIGNINGKEY"
+
+GIT_AUTHOR_GPG="/usr/local/bin/gpg"
+GIT_COMMITTER_GPG="$GIT_AUTHOR_GPG"
+git config --global gpg.program "$GIT_COMMITTER_GPG"
+
+GIT_AUTHOR_GPGSIGN="true"
+GIT_COMMITTER_GPGSIGN="$GIT_AUTHOR_GPGSIGN"
+git config --global commit.gpgsign "$GIT_COMMITTER_GPGSIGN"
