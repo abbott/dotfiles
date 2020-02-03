@@ -7,9 +7,10 @@
 # # Omit duplicates and commands that begin with a space from history.
 # export HISTCONTROL='ignoreboth'
 
-### DIRECTORIES
+### DIRECTORIES + FILES
 export PATH_TO_CODE="$HOME/code"
 export PATH_TO_PLAYGROUND="$HOME/code/playground"
+export ETERNAL_HISTORY_FILE=".bash_eternal_history"
 
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8'

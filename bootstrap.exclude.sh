@@ -9,6 +9,8 @@ init () {
 	mkdir -p "$PATH_TO_CODE"
 	echo "$PROMPT Making a Playground folder in $PATH_TO_PLAYGROUND if it doesn't already exist"
 	mkdir -p "$PATH_TO_PLAYGROUND"
+	echo "$PROMPT Creating "$ETERNAL_HISTORY_FILE" if it doesn't already exist"
+	touch "$ETERNAL_HISTORY_FILE"
 }
 
 # TODO : Delete symlinks to deleted files
