@@ -75,7 +75,7 @@ alias urlencode="python -c 'import sys, urllib as ul; print ul.quote_plus(sys.ar
 # find . -name .gitattributes | map dirname
 alias map="xargs -n1"
 
-# One of @janmoesen’s ProTip™s
+# One of @janmoesen’s ProTip's
 for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
 	alias "${method}"="lwp-request -m '${method}'"
 done
