@@ -6,19 +6,19 @@
 # Environment
 # alias python="sudo python3"
 
-# Shortcuts
+# SHORTCUTS
 alias shutdown='sudo shutdown -h now'
 alias reboot='sudo reboot'
 alias reload='. ~/.bashrc'
 alias ip='hostname -I'
 alias note="nano ~/.note"
-alias ali="nano ~/.bash_aliases"
+alias alias="nano ~/.alias"
 alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
 
 ### DEBIAN/RASPBIAN
 alias update='sudo apt-get update -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
-#alias update="sudo apt-get update -y"
-#alias upgrade="sudo apt-get upgrade -y"
+# alias update="sudo apt-get update -y"
+# alias upgrade="sudo apt-get upgrade -y"
 alias autoremove="sudo apt-get autoremove"
 alias raspi='sudo raspi-config'
 alias startvpn="sudo service openvpn start"
@@ -48,8 +48,6 @@ alias dev="npx nuxt"
 
 ### GIT
 alias g="git"
-
-# Undo a `git push`
 alias undopush="git push -f origin HEAD^:master"
 
 # Get week number
@@ -113,6 +111,53 @@ alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 # COLORIZE NAVIGATION
 #####################
 
+# enable color support of ls and also add handy aliases
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    #alias dir='dir --color=auto'
+    #alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+# colored GCC warnings and errors
+# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# Easier navigation: .., ..., ...., ....., ~ and -
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+# alias -- -="cd -"
+alias .-="cd -"
+
+# List all files
+alias ll='ls -la'
+
+# List all files colorized in long format
+alias lh='ls -lh'
+
+# List all files colorized in long format, including dot files
+alias la="ls -lha"
+
+# List only directories
+alias lsd='ls -l | grep "^d"'
+
+# List all files colorized in long format, including dot files
+alias la="ls -Gla"
+
+# some more ls aliases
+# alias ll='ls -l'
+# alias la='ls -A'
+# alias l='ls -CF'
+
+################################
+################################
+
 # # Detect which `ls` flavor is in use
 # if ls --color > /dev/null 2>&1; then # GNU `ls`
 # 	colorflag="--color"
@@ -135,53 +180,9 @@ alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 # # Always use color output for `ls`
 # alias ls="command ls ${colorflag}"
 
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# Easier navigation: .., ..., ...., ....., ~ and -
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias .....="cd ../../../.."
-alias ~="cd ~" # `cd` is probably faster to type though
-#alias -- -="cd -"
-alias .-="cd -"
-
-# List all files
-alias ll='ls -la'
-
-# List all files colorized in long format
-alias lh='ls -lh'
-
-# List all files colorized in long format, including dot files
-alias la="ls -lha"
-
-# List only directories
-alias lsd='ls -l | grep "^d"'
-
-# List all files colorized in long format, including dot files
-alias la="ls -Gla"
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-##################
-### macOS Specific
-##################
+#######
+# macOS
+#######
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 # alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'

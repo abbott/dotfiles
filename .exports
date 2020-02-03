@@ -26,19 +26,18 @@ export GPG_TTY=$(tty)
 # [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Yarn
-#PATH="/opt/yarn-1.9.4/bin:$PATH"
-#####PATH="$(yarn global bin):$PATH"
+# PATH="/opt/yarn-1.9.4/bin:$PATH"
+# PATH="$(yarn global bin):$PATH"
 
 ### DIRECTORIES
-
 export PATH_TO_PLAYGROUND="$HOME/playground"
 export PATH_TO_CODE="$HOME/code"
 
-# OS Editor
+### OS EDITOR
 export EDITOR="code -w"
 # export TEXT_EDITOR="Visual Studio Code"
 
-# VS Code
+### VS CODE
 # PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
 # PATH=/home/bruce/.vscode-server-insiders/bin/be0aca7188ec6a76e7c2379758c0fbc1e9c21f7b/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/bruce/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
 
@@ -57,7 +56,6 @@ export NODE_REPL_HISTORY_SIZE='32768'
 export NODE_REPL_MODE='sloppy'
 
 ### PYTHON
-
 # Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
 export PYTHONIOENCODING='UTF-8'
 
@@ -66,8 +64,8 @@ eval "$(pyenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 PATH="$PYENV_ROOT/bin:$PATH"
 
-###########################
-###########################
+################################
+################################
 
 # HISTSIZE=
 # HISTFILESIZE=
@@ -106,8 +104,8 @@ PATH="$PYENV_ROOT/bin:$PATH"
 # CLOUDFLARE_API_KEY=36a2f21332b16e75f89ed91a2eaed7702265c
 # TRAEFIK_DEFAULT_ENTRYPOINTS=https,http
 
-###########################
-###########################
+################################
+################################
 
 # This should be the last line of the file
 # For local changes
