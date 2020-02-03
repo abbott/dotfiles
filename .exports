@@ -51,3 +51,12 @@ PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin
 
 # Node Modules
 PATH="./node_modules/.bin:$PATH"
+
+export PATH_TO_PLAYGROUND="$HOME/playground"
+export PATH_TO_CODE="$HOME/code"
+export TEXT_EDITOR="Visual Studio Code"
+
+# This should be the last line of the file
+# For local changes
+# Don't make edits below this
+[ -f ".exports.local" ] && source ".exports.local"

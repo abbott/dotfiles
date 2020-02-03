@@ -169,3 +169,38 @@ function o() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+############ source for items below https://github.com/ajmalsiddiqui/dotfiles
+
+# This line imports an OS specific functions file if one exists
+# Not been tested on any OS other than Mac OSX
+# TODO: find a better way than uname to distinguish between linux distros
+[ -f ".functions.$( uname )" ] && source ".functions.$( uname )"
+
+# I use playgrounds to experiment with new languages and features
+# without making a full fledged project
+# This creates a new playground with the name given as a command line arg
+play () {
+	# TODO : redirect io to /dev/null and write custom messages
+	if [ $# -lt 1 ] ; then
+		cd "$PATH_TO_PLAYGROUND" && echo 'In playground'
+	fi
+	mkdir -p $PATH_TO_PLAYGROUND/$1 && cd $PATH_TO_PLAYGROUND/$1
+	echo "In playground $1" 
+}
+
+# Create a new project and cd into it, does NOT check if project already exists
+project () {
+	# TODO : redirect io to /dev/null and write custom messages
+        if [ $# -lt 1 ] ; then
+                cd "$PATH_TO_PROJECTS" && echo 'In Projects'
+        fi
+
+        mkdir -p "$PATH_TO_PROJECTS/$1" && cd "$PATH_TO_PROJECTS/$1"
+        echo "In project $1"
+}
+
+# This should be the last line of the file
+# For local changes
+# Don't make edits below this
+[ -f ".functions.local" ] && source ".functions.local"
