@@ -1,34 +1,34 @@
 #!/usr/bin/env bash
 
 # Enable aliases to be sudo’ed
-# alias sudo='sudo '
+# alias sudo="sudo "
 
 # Environment
 # alias python="sudo python3"
 
 # SHORTCUTS
-alias shutdown='sudo shutdown -h now'
-alias reboot='sudo reboot'
-alias reload='. ~/.bashrc'
-alias ip='hostname -I'
+alias shutdown="sudo shutdown -h now"
+alias reboot="sudo reboot"
+alias reload=". ~/.bashrc"
+alias ip="hostname -I"
 alias note="nano ~/.note"
 alias alias="nano ~/.alias"
-alias brewup='brew update; brew upgrade; brew cleanup; brew doctor'
+alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 
 ### DEBIAN/RASPBIAN
-alias update='sudo apt-get update -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean'
+alias update="sudo apt-get update -y && sudo apt-get dist-upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean"
 # alias update="sudo apt-get update -y"
 # alias upgrade="sudo apt-get upgrade -y"
 alias autoremove="sudo apt-get autoremove"
-alias raspi='sudo raspi-config'
+alias raspi="sudo raspi-config"
 alias startvpn="sudo service openvpn start"
 alias stopvpn="sudo service openvpn stop"
 alias edit="sudo geany"
 
 ### DOCKER
 alias dockstopall="docker stop $(docker ps -q)"
-alias dock='docker ps -a'
-alias prune='docker image prune'
+alias dock="docker ps -a"
+alias prune="docker image prune"
 alias dockstop="docker stop"
 alias dockup="docker-compose up"
 alias dockdown="docker-compose down"
@@ -51,7 +51,7 @@ alias g="git"
 alias undopush="git push -f origin HEAD^:master"
 
 # Get week number
-alias week='date +%V'
+alias week="date +%V"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -68,7 +68,7 @@ alias flush="dscacheutil -flushcache && killall -HUP mDNSResponder"
 alias c="tr -d '\n' | pbcopy"
 
 # URL-encode strings
-alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);"'
+alias urlencode="python -c 'import sys, urllib as ul; print ul.quote_plus(sys.argv[1]);'"
 
 # Intuitive map function
 # For example, to list all directories that contain a certain file:
@@ -92,13 +92,13 @@ alias pumpitup="osascript -e 'set volume output volume 100'"
 alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
 
 # Print each PATH entry on a separate line
-alias path='echo -e ${PATH//:/\\n}'
+alias path="echo -e ${PATH//:/\\n}"
 
 # File size
-alias fs="stat -f \"%z bytes\""
+alias fs="stat -f \'%z bytes\'"
 
 # ROT13-encode text. Works for decoding, too! ;)
-alias rot13='tr a-zA-Z n-za-mN-ZA-M'
+alias rot13="tr a-zA-Z n-za-mN-ZA-M"
 
 # View HTTP traffic
 alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
@@ -114,17 +114,17 @@ alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
+    alias ls="ls --color=auto"
+    #alias dir="dir --color=auto"
+    #alias vdir="vdir --color=auto"
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
+    alias grep="grep --color=auto"
+    alias fgrep="fgrep --color=auto"
+    alias egrep="egrep --color=auto"
 fi
 
 # colored GCC warnings and errors
-# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+# export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
 
 # Easier navigation: .., ..., ...., ....., ~ and -
 alias ..="cd .."
@@ -136,24 +136,24 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias .-="cd -"
 
 # List all files
-alias ll='ls -la'
+alias ll="ls -la"
 
 # List all files colorized in long format
-alias lh='ls -lh'
+alias lh="ls -lh"
 
 # List all files colorized in long format, including dot files
 alias la="ls -lha"
 
 # List only directories
-alias lsd='ls -l | grep "^d"'
+alias lsd="ls -l | grep '^d'"
 
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
 
 # some more ls aliases
-# alias ll='ls -l'
-# alias la='ls -A'
-# alias l='ls -CF'
+# alias ll="ls -l"
+# alias la="ls -A"
+# alias l="ls -CF"
 
 ################################
 ################################

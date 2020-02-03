@@ -5,7 +5,7 @@ source .exports
 
 # Initialize a few things
 init () {
-	echo "$PROMPT Making a Code/Projects folder in $PATH_TO_CODE if it doesn't already exist"
+	echo "$PROMPT Making a Code/Scripts folder in $PATH_TO_CODE if it doesn't already exist"
 	mkdir -p "$PATH_TO_CODE"
 	echo "$PROMPT Making a Playground folder in $PATH_TO_PLAYGROUND if it doesn't already exist"
 	mkdir -p "$PATH_TO_PLAYGROUND"

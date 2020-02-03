@@ -7,6 +7,10 @@
 # # Omit duplicates and commands that begin with a space from history.
 # export HISTCONTROL='ignoreboth'
 
+### DIRECTORIES
+export PATH_TO_CODE="$HOME/code"
+export PATH_TO_PLAYGROUND="$HOME/code/playground"
+
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8'
 export LC_ALL='en_US.UTF-8'
@@ -28,10 +32,6 @@ export GPG_TTY=$(tty)
 # Yarn
 # PATH="/opt/yarn-1.9.4/bin:$PATH"
 # PATH="$(yarn global bin):$PATH"
-
-### DIRECTORIES
-export PATH_TO_PLAYGROUND="$HOME/playground"
-export PATH_TO_CODE="$HOME/code"
 
 ### OS EDITOR
 export EDITOR="code -w"
