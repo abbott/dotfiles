@@ -9,6 +9,7 @@
 
 ### DIRECTORIES + FILES
 export PATH_TO_CODE="$HOME/code"
+export PATH_TO_DOTFILES="$HOME/code/dotfiles"
 export PATH_TO_PLAYGROUND="$HOME/code/playground"
 export ETERNAL_HISTORY_FILE=".bash_eternal_history"
 
