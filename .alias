@@ -109,9 +109,9 @@ alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET
 # Start an HTTP server from a directory
 alias server="open http://localhost:8080/ && python -m SimpleHTTPServer 8080"
 
-#######################
-### COLORIZE NAVIGATION
-#######################
+#####################
+# COLORIZE NAVIGATION
+#####################
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -165,9 +165,9 @@ alias lsd='ls -l | grep "^d"'
 # List all files colorized in long format, including dot files
 alias la="ls -Gla"
 
-######################
-### macOS Specific ###
-######################
+##################
+### macOS Specific
+##################
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 # alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
