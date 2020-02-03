@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROMPT='[bootstrap]'
-source .exports
+source .export
 
 # Initialize a few things
 init () {
@@ -17,13 +17,14 @@ init () {
 # TODO : Delete symlinks to deleted files
 # Is this where rsync shines?
 # TODO - add support for -f and --force
+# abbott: added ln -sf for force
 link () {
 	echo "$PROMPT This utility will symlink the files in this repo to the home directory"
 	echo "$PROMPT Proceed? (y/n)"
 	read resp
 	# TODO - regex here?
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
+		for file in $( ls -A -sf | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
 			ln -sv "$PWD/$file" "$HOME"
 		done
 		# TODO: source files here?
