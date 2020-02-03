@@ -185,13 +185,19 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
 [user]
+
 	name = Bruce Abbott
 	email = bruce@egg.haus
 	signingkey = A68C4D3B
+
 [gpg]
+
 	program = /usr/local/bin/gpg
+
 [filter "lfs"]
+
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f

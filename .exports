@@ -1,60 +1,113 @@
 #!/usr/bin/env bash
 
-# Mac Editor
-export EDITOR="code -w"
-
-# Enable persistent REPL history for `node`.
-export NODE_REPL_HISTORY=~/.node_history;
-# Allow 32³ entries; the default is 1000.
-export NODE_REPL_HISTORY_SIZE='32768';
-# Use sloppy mode by default, matching web browsers.
-export NODE_REPL_MODE='sloppy';
-
-# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
-export PYTHONIOENCODING='UTF-8';
-
-# Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
-export HISTFILESIZE="${HISTSIZE}";
-# Omit duplicates and commands that begin with a space from history.
-export HISTCONTROL='ignoreboth';
+# abbott: disabled since this is handled in .bashrc
+# # Increase Bash history size. Allow 32³ entries; the default is 500.
+# export HISTSIZE='32768'
+# export HISTFILESIZE="${HISTSIZE}"
+# # Omit duplicates and commands that begin with a space from history.
+# export HISTCONTROL='ignoreboth'
 
 # Prefer US English and use UTF-8.
-export LANG='en_US.UTF-8';
-export LC_ALL='en_US.UTF-8';
+export LANG='en_US.UTF-8'
+export LC_ALL='en_US.UTF-8'
 
 # Highlight section titles in manual pages.
-export LESS_TERMCAP_md="${yellow}";
+export LESS_TERMCAP_md="${yellow}"
 
 # Don’t clear the screen after quitting a manual page.
-export MANPAGER='less -X';
+export MANPAGER='less -X'
 
 # Avoid issues with `gpg` as installed via Homebrew.
 # https://stackoverflow.com/a/42265848/96656
-export GPG_TTY=$(tty);
+export GPG_TTY=$(tty)
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Yarn
+#PATH="/opt/yarn-1.9.4/bin:$PATH"
+#####PATH="$(yarn global bin):$PATH"
+
+### DIRECTORIES
+
+export PATH_TO_PLAYGROUND="$HOME/playground"
+export PATH_TO_CODE="$HOME/code"
+
+# OS Editor
+export EDITOR="code -w"
+# export TEXT_EDITOR="Visual Studio Code"
+
+# VS Code
+# PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
+# PATH=/home/bruce/.vscode-server-insiders/bin/be0aca7188ec6a76e7c2379758c0fbc1e9c21f7b/bin:/home/linuxbrew/.linuxbrew/bin:/home/linuxbrew/.linuxbrew/sbin:/home/bruce/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/games:/usr/games
+
+### NODE
+
+# Node Modules
+PATH="./node_modules/.bin:$PATH"
+
+# Enable persistent REPL history for `node`.
+export NODE_REPL_HISTORY=~/.node_history
+
+# Allow 32³ entries; the default is 1000.
+export NODE_REPL_HISTORY_SIZE='32768'
+
+# Use sloppy mode by default, matching web browsers.
+export NODE_REPL_MODE='sloppy'
+
+### PYTHON
+
+# Make Python use UTF-8 encoding for output to stdin, stdout, and stderr.
+export PYTHONIOENCODING='UTF-8'
 
 # Python version manager
 eval "$(pyenv init -)"
 export PYENV_ROOT="$HOME/.pyenv"
 PATH="$PYENV_ROOT/bin:$PATH"
 
-# Yarn
-#PATH="/opt/yarn-1.9.4/bin:$PATH"
-#####PATH="$(yarn global bin):$PATH"
+###########################
+###########################
 
-# VS Code
-PATH="/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/bin:$PATH"
+# HISTSIZE=
+# HISTFILESIZE=
+# HISTFILE=/home/bruce/.bash_eternal_history
 
-# Node Modules
-PATH="./node_modules/.bin:$PATH"
+# COLORTERM=truecolor
+# TERM_PROGRAM=vscode
+# TERM_PROGRAM_VERSION=1.42.0-insider
+# VSCODE_IPC_HOOK_CLI=/tmp/vscode-ipc-a0abb86b-82a9-45b6-a825-3121a9bc1345.sock
 
-export PATH_TO_PLAYGROUND="$HOME/playground"
-export PATH_TO_CODE="$HOME/code"
-export TEXT_EDITOR="Visual Studio Code"
+# GPG_TTY=/dev/pts/4
+# MANPATH=/home/linuxbrew/.linuxbrew/share/man:
+# INFOPATH=/home/linuxbrew/.linuxbrew/share/info
+# AMD_ENTRYPOINT=vs/server/remoteExtensionHostProcess
+
+# PIPE_LOGGING=true
+# VERBOSE_LOGGING=true
+# OLDPWD=/home/bruce/code/github
+# PWD=/home/bruce/code/github/dotfiles
+
+# HOMEBREW_PREFIX=/home/linuxbrew/.linuxbrew
+# HOMEBREW_CELLAR=/home/linuxbrew/.linuxbrew/Cellar
+# HOMEBREW_REPOSITORY=/home/linuxbrew/.linuxbrew/Homebrew
+
+# ENVIRONMENT FILE
+
+# PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+# PUID=1001
+# PGID=1001
+# TZ="America/New_York"
+# USERDIR="/home/bruce"
+# OPT_DIR="/opt/traefik"
+# OPS_EMAIL=ops@egghaus.co
+# DOMAINNAME=mausma.us
+# ACME_ENABLE=true
+# CLOUDFLARE_API_KEY=36a2f21332b16e75f89ed91a2eaed7702265c
+# TRAEFIK_DEFAULT_ENTRYPOINTS=https,http
+
+###########################
+###########################
 
 # This should be the last line of the file
 # For local changes

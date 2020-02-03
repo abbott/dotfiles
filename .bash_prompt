@@ -149,5 +149,4 @@ export PS1;
 PS2="\[${txtylw}\]→ \[${reset}\]";
 export PS2;
 
-
 #PS1="\[$bldmag\]\u \[$txtwht\]at \[$txtred\]\h \[$txtwht\]in \[$txtgrn\]\w\[$txtwht\]\$([[ -n \$(git branch 2> /dev/null) ]] && echo \" on \")\[$txtmag\]\$(parse_git_branch)\[$txtwht\]\n\$ \[$txtrst\]"
