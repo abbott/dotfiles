@@ -2,8 +2,6 @@
 
 > REPO FORKED from [ajmalsiddiqui's dotfiles](https://github.com/ajmalsiddiqui/dotfiles)
 
-Top secret text files that make my world a better place. :')
-
 Make sure you read the [About My Dotfiles](#about-my-dotfiles) section if you intend to use these.
 Currently under construction.
 
