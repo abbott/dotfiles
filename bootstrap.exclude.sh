@@ -24,14 +24,14 @@ link () {
 	read resp
 	# TODO - regex here?
 	if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-		for file in $( ls -A -sf | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
-			ln -svf "$PWD/$file" "$HOME"
+		for file in $( ls -A | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
+			ln -svfn "$PWD/$file" "$HOME"
 		done
 		echo "$PROMPT Symlink complete."
-		for i in `find $HOME -name ".*" -perm /g+w,o+w`; do 
-			chmod 644 "$i" 
-		done
-		echo "$PROMPT Permissions modified."
+		# for i in `find $HOME -name ".*" -perm /g+w,o+w`; do 
+		# 	chmod 644 "$i" 
+		# done
+		# echo "$PROMPT Permissions modified."
 		# TODO: source files here?
 	else
 		echo "$PROMPT Symlink cancelled by user."
