@@ -27,8 +27,12 @@ link () {
 		for file in $( ls -A -sf | grep -vE '\.exclude*|\.git$|\.gitignore|.*.md' ) ; do
 			ln -svf "$PWD/$file" "$HOME"
 		done
-		# TODO: source files here?
 		echo "$PROMPT Symlink complete."
+		for i in `find $HOME -name ".*" -perm /g+w,o+w`; do 
+			chmod 644 "$i" 
+		done
+		echo "$PROMPT Permissions modified."
+		# TODO: source files here?
 	else
 		echo "$PROMPT Symlink cancelled by user."
 		return 1
