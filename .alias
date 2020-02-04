@@ -12,7 +12,7 @@ alias reboot="sudo reboot"
 alias reload=". ~/.bashrc"
 alias ip="hostname -I"
 alias note="nano ~/.note"
-alias alias="nano ~/.alias"
+alias ali="nano ~/.alias"
 alias brewup="brew update; brew upgrade; brew cleanup; brew doctor"
 
 ### DEBIAN/RASPBIAN
@@ -26,12 +26,12 @@ alias stopvpn="sudo service openvpn stop"
 alias edit="sudo geany"
 
 ### DOCKER
-alias dockstopall="docker stop $(docker ps -q)"
-alias dock="docker ps -a"
-alias prune="docker image prune"
-alias dockstop="docker stop"
-alias dockup="docker-compose up"
-alias dockdown="docker-compose down"
+# alias dockstopall="docker stop $(docker ps -q)"
+# alias dock="docker ps -a"
+# alias prune="docker image prune"
+# alias dockstop="docker stop"
+# alias dockup="docker-compose up"
+# alias dockdown="docker-compose down"
 
 ### DIRECTORIES
 alias .ssh="cd ~/.ssh"
