@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PROMPT='[bootstrap]'
-source ./.export
+. ./.export
 
 # Initialize a few things
 init () {
