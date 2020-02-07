@@ -102,5 +102,5 @@ fi;
 
 export PATH="/usr/local/sbin:$PATH"
 
-eval $(/bin/brew shellenv)
-eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+#eval $(/bin/brew shellenv)
+#eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
