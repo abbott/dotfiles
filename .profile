@@ -13,7 +13,7 @@
 # umask 022
 
 # abbott: seems redundant from .bash_profile reference
-if running bash
+# if running bash
 if [ -n "$BASH_VERSION" ]; then
     # include .bashrc if it exists
     if [ -f "$HOME/.bashrc" ]; then
